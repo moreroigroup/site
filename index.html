@@ -17,6 +17,7 @@
       --morero-blue:#003366; /* primary */
       --morero-gold:#CBA135; /* accent */
       --ink:#0f172a;         /* slate-900 */
+      --li-blue:#0A66C2;     /* LinkedIn brand */
     }
     html{scroll-behavior:smooth}
     body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans','Apple Color Emoji','Segoe UI Emoji',sans-serif}
@@ -45,7 +46,8 @@
           <a href="#industries" class="hover:text-[var(--morero-blue)]">Industries</a>
           <a href="#tools" class="hover:text-[var(--morero-blue)]">Platforms & Tools</a>
           <a href="#demos" class="hover:text-[var(--morero-blue)]">Live Demos</a>
-          <a href="#videos" class="hover:text-[var(--morero-blue)]">Videos</a><!-- NEW -->
+          <a href="#videos" class="hover:text-[var(--morero-blue)]">Videos</a>
+          <a href="#linkedin" class="hover:text-[var(--morero-blue)]">LinkedIn</a><!-- NEW -->
           <a href="#careers" class="hover:text-[var(--morero-blue)]">Careers</a>
           <a href="#about" class="hover:text-[var(--morero-blue)]">About</a>
           <a href="#contact" class="btn btn-primary">Talk to Us</a>
@@ -62,7 +64,8 @@
         <a href="#industries" class="block">Industries</a>
         <a href="#tools" class="block">Platforms & Tools</a>
         <a href="#demos" class="block">Live Demos</a>
-        <a href="#videos" class="block">Videos</a><!-- NEW -->
+        <a href="#videos" class="block">Videos</a>
+        <a href="#linkedin" class="block">LinkedIn</a><!-- NEW -->
         <a href="#careers" class="block">Careers</a>
         <a href="#about" class="block">About</a>
         <a href="#contact" class="btn btn-primary w-full justify-center">Talk to Us</a>
@@ -262,7 +265,7 @@
 
   <!-- DEMOS -->
   <section id="demos" class="section bg-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx(auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
         <div>
           <h2 class="text-3xl font-bold">Live demo gallery</h2>
@@ -340,7 +343,7 @@
   </section>
 
   <!-- VIDEOS (YouTube @MoreroIG) -->
-  <!-- Uses uploads playlist derived from channel ID UCnlIWGk8eznpFwqXsHwyhfQ => UUnlIWGk8eznpFwqXsHwyhfQ -->
+  <!-- Uploads playlist: UCnlIWGk8eznpFwqXsHwyhfQ => UUnlIWGk8eznpFwqXsHwyhfQ -->
   <section id="videos" class="section bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-8">
@@ -369,6 +372,48 @@
              data-theme="dark"
              data-count="default"></div>
       </div>
+    </div>
+  </section>
+
+  <!-- LINKEDIN (Follow us for more stories on products) -->
+  <section id="linkedin" class="section bg-slate-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center gap-3">
+          <!-- LinkedIn Icon (SVG) -->
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl" style="background:var(--li-blue);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+              <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4zM8 8.5h3.8v2h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.5c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.7-2.5 3.45V23H8z"/>
+            </svg>
+          </span>
+          <h2 class="text-3xl font-bold">Follow us for more stories on products</h2>
+        </div>
+        <p class="mt-3 text-slate-600">Product launches, behind-the-scenes builds, and data/AI tips—right from the team.</p>
+      </div>
+
+      <!-- Official LinkedIn Follow Button (needs numeric company ID) -->
+      <div class="flex items-center justify-center">
+        <script type="IN/FollowCompany" data-id="REPLACE_WITH_NUMERIC_COMPANY_ID" data-counter="right"></script>
+      </div>
+
+      <!-- Always-works card -->
+      <a href="https://www.linkedin.com/company/morero-intelligence-group-pty-ltd" target="_blank" rel="noopener"
+         class="mt-6 block rounded-2xl border border-slate-200 shadow-soft bg-white hover:bg-slate-50 transition">
+        <div class="p-6 flex items-center justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <span class="inline-flex items-center justify-center w-12 h-12 rounded-xl" style="background:var(--li-blue);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4zM8 8.5h3.8v2h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.5c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.7-2.5 3.45V23H8z"/>
+              </svg>
+            </span>
+            <div>
+              <p class="font-semibold text-lg">@Morero Intelligence Group (Pty) Ltd</p>
+              <p class="text-sm text-slate-600">Follow our company page on LinkedIn for more product stories</p>
+            </div>
+          </div>
+          <span class="btn btn-primary">View on LinkedIn</span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -438,7 +483,7 @@
         <article class="bg-slate-50 rounded-2xl border border-slate-200 p-6">
           <div class="flex items-center justify-between gap-4">
             <h3 class="font-semibold text-lg">HR Admin Intern</h3>
-          <span class="text-xs px-2 py-1 rounded-full bg-slate-200">Internship</span>
+            <span class="text-xs px-2 py-1 rounded-full bg-slate-200">Internship</span>
           </div>
           <p class="mt-2 text-sm text-slate-600">
             Support recruitment logistics, records, onboarding/offboarding, and internal communications.
@@ -560,7 +605,10 @@
     </div>
   </footer>
 
-  <!-- YouTube platform script for the subscribe button -->
+  <!-- Scripts -->
+  <!-- LinkedIn Platform script (for Follow button) -->
+  <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+  <!-- YouTube platform script (for Subscribe button) -->
   <script async src="https://apis.google.com/js/platform.js"></script>
 
   <script>
