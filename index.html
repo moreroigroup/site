@@ -45,7 +45,8 @@
           <a href="#industries" class="hover:text-[var(--morero-blue)]">Industries</a>
           <a href="#tools" class="hover:text-[var(--morero-blue)]">Platforms & Tools</a>
           <a href="#demos" class="hover:text-[var(--morero-blue)]">Live Demos</a>
-          <a href="#careers" class="hover:text-[var(--morero-blue)]">Careers</a><!-- NEW -->
+          <a href="#videos" class="hover:text-[var(--morero-blue)]">Videos</a><!-- NEW -->
+          <a href="#careers" class="hover:text-[var(--morero-blue)]">Careers</a>
           <a href="#about" class="hover:text-[var(--morero-blue)]">About</a>
           <a href="#contact" class="btn btn-primary">Talk to Us</a>
         </nav>
@@ -61,7 +62,8 @@
         <a href="#industries" class="block">Industries</a>
         <a href="#tools" class="block">Platforms & Tools</a>
         <a href="#demos" class="block">Live Demos</a>
-        <a href="#careers" class="block">Careers</a><!-- NEW -->
+        <a href="#videos" class="block">Videos</a><!-- NEW -->
+        <a href="#careers" class="block">Careers</a>
         <a href="#about" class="block">About</a>
         <a href="#contact" class="btn btn-primary w-full justify-center">Talk to Us</a>
       </div>
@@ -337,6 +339,39 @@
     </div>
   </section>
 
+  <!-- VIDEOS (YouTube @MoreroIG) -->
+  <!-- Uses uploads playlist derived from channel ID UCnlIWGk8eznpFwqXsHwyhfQ => UUnlIWGk8eznpFwqXsHwyhfQ -->
+  <section id="videos" class="section bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold">Videos</h2>
+        <p class="mt-2 text-slate-600">Latest uploads from our YouTube channel <span class="font-semibold">@MoreroIG</span>.</p>
+      </div>
+
+      <!-- Responsive 16:9 playlist embed -->
+      <div class="relative w-full" style="padding-top:56.25%;">
+        <iframe
+          class="absolute inset-0 w-full h-full rounded-2xl border border-slate-200 shadow-soft"
+          src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UUnlIWGk8eznpFwqXsHwyhfQ"
+          title="Morero Intelligence Group — YouTube uploads"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- Subscribe button -->
+      <div class="mt-6 flex items-center justify-center">
+        <div class="g-ytsubscribe"
+             data-channelid="UCnlIWGk8eznpFwqXsHwyhfQ"
+             data-layout="default"
+             data-theme="dark"
+             data-count="default"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- CAREERS -->
   <section id="careers" class="section bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -403,7 +438,7 @@
         <article class="bg-slate-50 rounded-2xl border border-slate-200 p-6">
           <div class="flex items-center justify-between gap-4">
             <h3 class="font-semibold text-lg">HR Admin Intern</h3>
-            <span class="text-xs px-2 py-1 rounded-full bg-slate-200">Internship</span>
+          <span class="text-xs px-2 py-1 rounded-full bg-slate-200">Internship</span>
           </div>
           <p class="mt-2 text-sm text-slate-600">
             Support recruitment logistics, records, onboarding/offboarding, and internal communications.
@@ -524,6 +559,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- YouTube platform script for the subscribe button -->
+  <script async src="https://apis.google.com/js/platform.js"></script>
 
   <script>
     // Mobile nav toggle
