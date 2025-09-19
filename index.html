@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Morero Intelligence Group — Data & AI Consulting</title>
+
+  <!-- TailwindCSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --morero-blue:#003366; /* primary */
+      --morero-gold:#CBA135; /* accent */
+      --ink:#0f172a;         /* slate-900 */
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans','Apple Color Emoji','Segoe UI Emoji',sans-serif}
+    .glass{background:rgba(255,255,255,.7);backdrop-filter:blur(10px)}
+    .shadow-soft{box-shadow:0 10px 25px rgba(2,6,23,.08)}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-radius:9999px;font-weight:600}
+    .btn-primary{background:var(--morero-blue);color:#fff}
+    .btn-primary:hover{filter:brightness(1.1)}
+    .btn-ghost{border:1px solid rgba(2,6,23,.1)}
+    .section{padding:4rem 0}
+    .badge{display:inline-block;padding:.35rem .6rem;border-radius:9999px;background:#f1f5f9;border:1px solid #e2e8f0;font-size:.78rem}
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#hero" class="flex items-center gap-3">
+          <img src="morero-logo.png" alt="Morero Intelligence Group" class="w-9 h-9 object-contain" onerror="this.style.display='none'">
+          <span class="font-bold text-lg tracking-tight">Morero Intelligence Group</span>
+        </a>
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#services" class="hover:text-[var(--morero-blue)]">Services</a>
+          <a href="#industries" class="hover:text-[var(--morero-blue)]">Industries</a>
+          <a href="#tools" class="hover:text-[var(--morero-blue)]">Platforms & Tools</a>
+          <a href="#demos" class="hover:text-[var(--morero-blue)]">Live Demos</a>
+          <a href="#careers" class="hover:text-[var(--morero-blue)]">Careers</a><!-- NEW -->
+          <a href="#about" class="hover:text-[var(--morero-blue)]">About</a>
+          <a href="#contact" class="btn btn-primary">Talk to Us</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center p-2 rounded btn-ghost" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200">
+      <div class="px-4 py-3 space-y-2 text-sm">
+        <a href="#services" class="block">Services</a>
+        <a href="#industries" class="block">Industries</a>
+        <a href="#tools" class="block">Platforms & Tools</a>
+        <a href="#demos" class="block">Live Demos</a>
+        <a href="#careers" class="block">Careers</a><!-- NEW -->
+        <a href="#about" class="block">About</a>
+        <a href="#contact" class="btn btn-primary w-full justify-center">Talk to Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-[var(--morero-blue)] to-slate-900 text-white">
+    <div class="absolute inset-0 opacity-20" aria-hidden="true" style="background-image:radial-gradient(600px 200px at 10% 10%, rgba(255,255,255,.2), transparent 70%), radial-gradient(600px 200px at 90% 30%, rgba(203,161,53,.35), transparent 70%)"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm">
+          <span class="w-2 h-2 rounded-full bg-[var(--morero-gold)]"></span>
+          We drive intelligence with purpose
+        </span>
+        <h1 class="mt-6 text-4xl sm:text-5xl font-extrabold leading-tight">Practical Data & AI for real business impact</h1>
+        <p class="mt-5 text-lg text-slate-200 max-w-2xl">We help Financial Services, Public Sector, Mining, Legal and Healthcare teams turn data into outcomes — from cloud data platforms to production AI assistants.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#contact" class="btn btn-primary">Book a discovery call</a>
+          <a href="#demos" class="btn btn-ghost bg-white/10 text-white border-white/20">See live demos</a>
+        </div>
+      </div>
+      <!-- quick tech snapshot -->
+      <div class="mt-14 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 opacity-80">
+        <div class="glass rounded-xl p-4 shadow-soft text-center"><p class="text-sm">Azure • Databricks</p></div>
+        <div class="glass rounded-xl p-4 shadow-soft text-center"><p class="text-sm">Snowflake</p></div>
+        <div class="glass rounded-xl p-4 shadow-soft text-center"><p class="text-sm">Power BI</p></div>
+        <div class="glass rounded-xl p-4 shadow-soft text-center"><p class="text-sm">Python • SQL</p></div>
+        <div class="glass rounded-xl p-4 shadow-soft text-center"><p class="text-sm">RAG • LLM Apps</p></div>
+        <div class="glass rounded-xl p-4 shadow-soft text-center"><p class="text-sm">MLOps • Governance</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold">What we do</h2>
+        <p class="mt-3 text-slate-600 max-w-2xl mx-auto">End-to-end data engineering and applied AI — delivered with speed, quality and compliance.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Data Platforms -->
+        <div class="bg-white rounded-2xl shadow-soft p-6 border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6"><path fill="currentColor" d="M3 7a9 4 0 1 0 18 0a9 4 0 1 0 -18 0"/><path fill="currentColor" d="M3 7v5c0 2.209 4.03 4 9 4s9-1.791 9-4V7" opacity=".4"/><path fill="currentColor" d="M3 12v5c0 2.209 4.03 4 9 4s9-1.791 9-4v-5" opacity=".2"/></svg>
+          </div>
+          <h3 class="font-semibold text-lg">Data Platforms</h3>
+          <p class="mt-2 text-sm text-slate-600">Data lakes/warehouses on Azure, Databricks & Snowflake. Modeling, ELT, governance, cost control.</p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1">
+            <li>Delta/Snowflake best practices</li>
+            <li>Data quality & lineage (POPIA/GDPR)</li>
+            <li>BI dashboards (Power BI, SSRS)</li>
+          </ul>
+        </div>
+        <!-- AI Assistants -->
+        <div class="bg-white rounded-2xl shadow-soft p-6 border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7v3H3a1 1 0 0 0 0 2h2v3a7 7 0 0 0 14 0v-3h2a1 1 0 0 0 0-2h-2V9a7 7 0 0 0-7-7m5 10v3a5 5 0 0 1-10 0v-3z"/></svg>
+          </div>
+          <h3 class="font-semibold text-lg">AI Assistants, RAG & Agentic AI</h3>
+          <p class="mt-2 text-sm text-slate-600">Domain copilots for legal, finance, operations and field teams. Secure retrieval, audit logs, human-in-the-loop.</p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1">
+            <li>Customized <strong>Agentic AI</strong> (multi-tool, workflow bots)</li>
+            <li>Contract Review • Court Scribe</li>
+            <li>Smart Irrigation Recommender</li>
+          </ul>
+        </div>
+        <!-- Enablement -->
+        <div class="bg-white rounded-2xl shadow-soft p-6 border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path fill="currentColor" d="M4 3h10v2H4zm0 6h16v2H4zm0 6h10v2H4z"/></svg>
+          </div>
+          <h3 class="font-semibold text-lg">Enablement & Governance</h3>
+          <p class="mt-2 text-sm text-slate-600">AI literacy, train-the-trainer, operating models and risk/compliance frameworks to scale safely.</p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1">
+            <li><strong>Training in AI & Data Analytics</strong> (teams & execs)</li>
+            <li>AI Do’s & Don’ts • SOPs</li>
+            <li>MLOps & Model monitoring • Cost & value tracking</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- extra services row -->
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
+        <!-- Migration -->
+        <div class="bg-white rounded-2xl shadow-soft p-6 border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path fill="currentColor" d="M3 12h18v2H3zM12 3l4 4h-3v7h-2V7H8z"/></svg>
+          </div>
+          <h3 class="font-semibold text-lg">On-Prem → Cloud Migrations</h3>
+          <p class="mt-2 text-sm text-slate-600">Modernize SQL Server/Oracle stacks and SAS workloads to Azure, AWS or GCP with minimal downtime.</p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1">
+            <li>Re-platform SSIS/SSRS, SQL Agent jobs</li>
+            <li>Data vaults, medallion & governance</li>
+            <li>Landing → Curated → BI with lineage</li>
+          </ul>
+        </div>
+
+        <!-- Integrations -->
+        <div class="bg-white rounded-2xl shadow-soft p-6 border border-slate-200">
+          <div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l4 4l-4 4l-4-4zm6 6l4 4l-4 4l-4-4zm-12 0l4 4l-4 4l-4-4zm6 6l4 4l-4 4l-4-4z"/></svg>
+          </div>
+          <h3 class="font-semibold text-lg">Integrations & Automation</h3>
+          <p class="mt-2 text-sm text-slate-600">Visio for process design, VBA for rapid automation, and platform-native pipelines.</p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1">
+            <li>Microsoft Visio • VBA automations</li>
+            <li>Event-driven & scheduled pipelines</li>
+            <li>API & app connectors (Teams/SharePoint)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section id="industries" class="section bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold">Who we serve</h2>
+        <p class="mt-3 text-slate-600 max-w-2xl mx-auto">Targeted solutions for regulated, asset-intensive and knowledge-driven sectors.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div class="rounded-xl border border-slate-200 p-4 text-center">
+          <p class="font-semibold">Financial Services</p>
+          <p class="text-xs text-slate-600 mt-1">Fraud, risk, analytics</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 p-4 text-center">
+          <p class="font-semibold">Public Sector</p>
+          <p class="text-xs text-slate-600 mt-1">Citizen services, insights</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 p-4 text-center">
+          <p class="font-semibold">Mining</p>
+          <p class="text-xs text-slate-600 mt-1">Sensors, safety, planning</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 p-4 text-center">
+          <p class="font-semibold">Legal</p>
+          <p class="text-xs text-slate-600 mt-1">Contract review, KM</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 p-4 text-center">
+          <p class="font-semibold">Healthcare</p>
+          <p class="text-xs text-slate-600 mt-1">Ops & clinical insights</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORMS & TOOLS -->
+  <section id="tools" class="section bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold">Platforms & Tools</h2>
+        <p class="mt-2 text-slate-600">We meet you where you are — and help you move forward.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <p class="font-semibold mb-3">Cloud</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="badge">Azure</span>
+            <span class="badge">AWS</span>
+            <span class="badge">Google Cloud Platform</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <p class="font-semibold mb-3">Databases & Warehouses</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="badge">SQL Server</span>
+            <span class="badge">Oracle</span>
+            <span class="badge">Snowflake</span>
+            <span class="badge">Delta Lake</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <p class="font-semibold mb-3">ETL / BI</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="badge">SSIS</span>
+            <span class="badge">SSRS</span>
+            <span class="badge">Power BI</span>
+            <span class="badge">Databricks</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-5">
+          <p class="font-semibold mb-3">Languages & Tooling</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="badge">Python</span>
+            <span class="badge">SQL</span>
+            <span class="badge">SAS</span>
+            <span class="badge">VBA</span>
+            <span class="badge">Microsoft Visio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMOS -->
+  <section id="demos" class="section bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
+        <div>
+          <h2 class="text-3xl font-bold">Live demo gallery</h2>
+          <p class="mt-2 text-slate-600">Show, don’t tell — a few prototypes we can tailor to your environment.</p>
+        </div>
+        <div class="flex gap-3">
+          <button class="btn btn-ghost" onclick="filterDemos('all')">All</button>
+          <button class="btn btn-ghost" onclick="filterDemos('ai')">AI</button>
+          <button class="btn btn-ghost" onclick="filterDemos('data')">Data</button>
+        </div>
+      </div>
+      <div id="demoGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Demo 1 -->
+        <article class="demo-card bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden" data-tags="ai legal">
+          <div class="p-5">
+            <h3 class="font-semibold">AI Contract Review</h3>
+            <p class="mt-2 text-sm text-slate-600">Upload a contract and get clause-level insights, risks, and playbook alignment.</p>
+            <div class="mt-4 flex gap-2 text-xs">
+              <span class="px-2 py-1 rounded-full bg-slate-100">RAG</span>
+              <span class="px-2 py-1 rounded-full bg-slate-100">Legal</span>
+            </div>
+            <a href="#contact" class="mt-4 inline-block btn btn-primary">Request demo</a>
+          </div>
+        </article>
+        <!-- Demo 2 -->
+        <article class="demo-card bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden" data-tags="ai ops">
+          <div class="p-5">
+            <h3 class="font-semibold">Court Scribe + Docket Assistant</h3>
+            <p class="mt-2 text-sm text-slate-600">Live transcription with speaker labels, docket generation and evidence linking.</p>
+            <div class="mt-4 flex gap-2 text-xs">
+              <span class="px-2 py-1 rounded-full bg-slate-100">Speech-to-Text</span>
+              <span class="px-2 py-1 rounded-full bg-slate-100">Workflow</span>
+            </div>
+            <a href="#contact" class="mt-4 inline-block btn btn-primary">Request demo</a>
+          </div>
+        </article>
+        <!-- Demo 3 -->
+        <article class="demo-card bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden" data-tags="ai agri">
+          <div class="p-5">
+            <h3 class="font-semibold">Smart Irrigation Recommender</h3>
+            <p class="mt-2 text-sm text-slate-600">Combine weather + soil data to plan watering cycles and save costs.</p>
+            <div class="mt-4 flex gap-2 text-xs">
+              <span class="px-2 py-1 rounded-full bg-slate-100">Forecast</span>
+              <span class="px-2 py-1 rounded-full bg-slate-100">Recommender</span>
+            </div>
+            <a href="#contact" class="mt-4 inline-block btn btn-primary">Request demo</a>
+          </div>
+        </article>
+        <!-- Demo 4 -->
+        <article class="demo-card bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden" data-tags="data governance">
+          <div class="p-5">
+            <h3 class="font-semibold">Data Quality & Lineage</h3>
+            <p class="mt-2 text-sm text-slate-600">Automated tests, audit trails and lineage maps for trusted decisions.</p>
+            <div class="mt-4 flex gap-2 text-xs">
+              <span class="px-2 py-1 rounded-full bg-slate-100">POPIA</span>
+              <span class="px-2 py-1 rounded-full bg-slate-100">Governance</span>
+            </div>
+            <a href="#contact" class="mt-4 inline-block btn btn-primary">Request demo</a>
+          </div>
+        </article>
+        <!-- Demo 5 -->
+        <article class="demo-card bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden" data-tags="enablement training">
+          <div class="p-5">
+            <h3 class="font-semibold">AI Literacy for Factories</h3>
+            <p class="mt-2 text-sm text-slate-600">Worker training, posters, SOPs and escalation pathways for safe AI use.</p>
+            <div class="mt-4 flex gap-2 text-xs">
+              <span class="px-2 py-1 rounded-full bg-slate-100">Enablement</span>
+              <span class="px-2 py-1 rounded-full bg-slate-100">Safety</span>
+            </div>
+            <a href="#contact" class="mt-4 inline-block btn btn-primary">Request demo</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREERS -->
+  <section id="careers" class="section bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold">Careers at Morero</h2>
+        <p class="mt-3 text-slate-600 max-w-2xl mx-auto">
+          We’re hiring across data, AI, and operations. Explore current openings and apply via our Google Form.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Data Engineer Intern -->
+        <article class="bg-slate-50 rounded-2xl border border-slate-200 p-6">
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="font-semibold text-lg">Data Engineer Intern</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-slate-200">Internship</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-600">
+            Support ingestion, cleaning and pipeline work on Databricks/Azure/Snowflake. Basic SQL and Python required.
+          </p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1">
+            <li>Assist with data ingestion & validation</li>
+            <li>Help build ELT pipelines</li>
+            <li>Contribute basic SQL/Python tasks</li>
+          </ul>
+          <a href="https://forms.gle/QKdvpJ3joPbuUvoG6" target="_blank" class="mt-4 inline-flex btn btn-primary">Apply</a>
+        </article>
+
+        <!-- AI Engineer Intern -->
+        <article class="bg-slate-50 rounded-2xl border border-slate-200 p-6">
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="font-semibold text-lg">AI Engineer Intern</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-slate-200">Internship</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-600">
+            Prototype and test ML/LLM models; support data prep and experiment tracking.
+          </p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1">
+            <li>Assist with model training & fine-tuning</li>
+            <li>Work on NLP/CV or predictive tasks</li>
+            <li>Document experiments & results</li>
+          </ul>
+          <a href="https://forms.gle/QKdvpJ3joPbuUvoG6" target="_blank" class="mt-4 inline-flex btn btn-primary">Apply</a>
+        </article>
+
+        <!-- Data Engineer (Full-Time) -->
+        <article class="bg-slate-50 rounded-2xl border border-slate-200 p-6">
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="font-semibold text-lg">Data Engineer</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-slate-200">Full-Time</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-600">
+            Design and optimize ETL/ELT; integrate enterprise sources; enforce data quality & governance.
+          </p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1">
+            <li>Build scalable pipelines (Spark/Databricks/ADF)</li>
+            <li>Integrate SAP/CRM/External data → Delta/Snowflake</li>
+            <li>Optimize for cost & performance</li>
+          </ul>
+          <a href="https://forms.gle/QKdvpJ3joPbuUvoG6" target="_blank" class="mt-4 inline-flex btn btn-primary">Apply</a>
+        </article>
+
+        <!-- HR Admin Intern -->
+        <article class="bg-slate-50 rounded-2xl border border-slate-200 p-6">
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="font-semibold text-lg">HR Admin Intern</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-slate-200">Internship</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-600">
+            Support recruitment logistics, records, onboarding/offboarding, and internal communications.
+          </p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1">
+            <li>Screen CVs & schedule interviews</li>
+            <li>Maintain HR records</li>
+            <li>Assist with HR projects</li>
+          </ul>
+          <a href="https://forms.gle/QKdvpJ3joPbuUvoG6" target="_blank" class="mt-4 inline-flex btn btn-primary">Apply</a>
+        </article>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="https://forms.gle/QKdvpJ3joPbuUvoG6" target="_blank" class="btn btn-ghost">
+          Apply via Google Form
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl font-bold">About Morero Intelligence Group</h2>
+          <p class="mt-3 text-slate-600">Morero Intelligence Group (Pty) Ltd is a South African Data & AI consultancy focused on pragmatic outcomes. We blend strategy, engineering and experimentation to unlock measurable value while keeping compliance and governance front-and-center.</p>
+          <ul class="mt-4 text-sm list-disc pl-5 space-y-1">
+            <li>Africa-first perspective, global standards</li>
+            <li>Secure architectures on Azure, AWS, GCP, Databricks & Snowflake</li>
+            <li>Prototypes you can touch, then scale to production</li>
+          </ul>
+          <!-- Mission & Vision -->
+          <div class="mt-6 grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl border border-slate-200 p-5">
+              <h3 class="font-semibold">Mission</h3>
+              <p class="mt-2 text-sm text-slate-600">To empower organizations to leverage data and AI responsibly — driving measurable outcomes, stronger compliance, and sustainable growth.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 p-5">
+              <h3 class="font-semibold">Vision</h3>
+              <p class="mt-2 text-sm text-slate-600">To be Africa’s most trusted partner for practical, ethical intelligence — where purpose meets performance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+          <h3 class="font-semibold">Capabilities snapshot</h3>
+          <dl class="mt-3 grid grid-cols-2 gap-3 text-sm">
+            <div><dt class="text-slate-500">Cloud / Data</dt><dd>Azure, AWS, GCP, Databricks, Snowflake, Delta</dd></div>
+            <div><dt class="text-slate-500">Databases</dt><dd>SQL Server, Oracle</dd></div>
+            <div><dt class="text-slate-500">ETL / BI</dt><dd>SSIS, SSRS, Power BI</dd></div>
+            <div><dt class="text-slate-500">Languages</dt><dd>Python, SQL, SAS, VBA</dd></div>
+            <div><dt class="text-slate-500">Design</dt><dd>Microsoft Visio (process & data flows)</dd></div>
+            <div><dt class="text-slate-500">AI</dt><dd>RAG, Agentic AI, MLOps, Governance</dd></div>
+          </dl>
+          <a href="#contact" class="mt-5 inline-block btn btn-primary">Get a one-pager</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section id="contact" class="section bg-gradient-to-b from-slate-900 to-[var(--morero-blue)] text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold">Let’s explore your use case</h2>
+        <p class="mt-2 text-slate-200">Tell us your data or AI challenge; we’ll propose a lightweight pilot within days.</p>
+      </div>
+      <!-- Formspree-wired form -->
+      <form
+        id="contactForm"
+        class="mt-8 grid md:grid-cols-2 gap-4 bg-white/10 border border-white/20 rounded-2xl p-6"
+        action="https://formspree.io/f/mkgvlllw"
+        method="POST"
+        novalidate
+      >
+        <!-- Honeypot (spam trap) -->
+        <input type="text" name="_gotcha" id="gotcha" class="hidden" tabindex="-1" autocomplete="off">
+
+        <div class="md:col-span-1">
+          <label class="block text-sm mb-1" for="name">Full name</label>
+          <input id="name" name="name" class="w-full rounded-lg p-3 text-slate-900" placeholder="Your name" required>
+        </div>
+        <div class="md:col-span-1">
+          <label class="block text-sm mb-1" for="email">Work email</label>
+          <input id="email" name="email" type="email" class="w-full rounded-lg p-3 text-slate-900" placeholder="you@company.com" required>
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm mb-1" for="message">What would you like to build?</label>
+          <textarea id="message" name="message" rows="4" class="w-full rounded-lg p-3 text-slate-900" placeholder="Briefly describe your use case" required></textarea>
+        </div>
+
+        <!-- Optional Formspree helpers -->
+        <input type="hidden" name="_subject" value="New enquiry from Morero site">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="md:col-span-2 flex flex-wrap items-center gap-3">
+          <button id="submitBtn" type="submit" class="btn btn-primary">Request a discovery call</button>
+          <span id="formNote" class="text-sm opacity-90">Your message will be sent securely.</span>
+        </div>
+        <p id="formAlert" class="md:col-span-2 text-sm mt-2 hidden"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="morero-logo.png" alt="MIG" class="w-8 h-8 object-contain" onerror="this.style.display='none'">
+        <div>
+          <p class="font-semibold">Morero Intelligence Group (Pty) Ltd</p>
+          <p class="text-sm text-slate-500">Johannesburg, South Africa</p>
+        </div>
+      </div>
+      <div class="text-sm text-slate-500">
+        © <span id="year"></span> Morero Intelligence Group. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click',()=>mobileNav.classList.toggle('hidden'));
+
+    // Demo filter
+    function filterDemos(tag){
+      const cards = document.querySelectorAll('.demo-card');
+      cards.forEach(c=>{
+        const tags = (c.dataset.tags||'').toLowerCase();
+        c.style.display = (tag==='all' || tags.includes(tag)) ? '' : 'none';
+      });
+    }
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Formspree wiring (fetch + UX)
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const note = document.getElementById('formNote');
+    const alertBox = document.getElementById('formAlert');
+    const FORMSPREE_ENDPOINT = form?.getAttribute('action') || '';
+
+    function showAlert(msg, ok=true){
+      alertBox.textContent = msg;
+      alertBox.classList.remove('hidden');
+      alertBox.classList.toggle('text-green-200', ok);
+      alertBox.classList.toggle('text-red-200', !ok);
+    }
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if(!name || !email || !message){
+        showAlert('Please fill in all required fields.', false);
+        return;
+      }
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        showAlert('Please enter a valid email address.', false);
+        return;
+      }
+      // honeypot
+      if(form._gotcha.value) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      note.textContent = 'Submitting to Formspree…';
+
+      try {
+        const formData = new FormData(form);
+        const res = await fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+
+        if(res.ok){
+          showAlert('Thanks! Your request has been sent. We will follow up shortly.');
+          form.reset();
+          submitBtn.textContent = 'Sent ✓';
+        } else {
+          const data = await res.json().catch(()=>({}));
+          const err = (data && data.errors && data.errors[0] && data.errors[0].message) || 'Something went wrong.';
+          showAlert('Could not send: ' + err, false);
+          submitBtn.textContent = 'Try again';
+          submitBtn.disabled = false;
+        }
+      } catch (err) {
+        showAlert('Network error. Please try again.', false);
+        submitBtn.textContent = 'Try again';
+        submitBtn.disabled = false;
+      } finally {
+        note.textContent = 'Your message will be sent securely.';
+      }
+    });
+  </script>
+</body>
+</html>
