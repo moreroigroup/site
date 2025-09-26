@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Insights | Morero Intelligence Group</title>
+  <meta name="description" content="Morero Intelligence Group insights: articles, briefs and thought leadership on practical Data & AI for Africa." />
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { morero: { blue: '#003366', blue2: '#386685', gold: '#DAA520' } } } }
+    }
+  </script>
+  <style>
+    /* Subtle Morero-themed background */
+    body {
+      background:
+        radial-gradient(1200px 400px at 10% -10%, rgba(218,165,32,0.10), transparent 60%),
+        radial-gradient(900px 300px at 110% 0%, rgba(56,102,133,0.12), transparent 60%),
+        linear-gradient(180deg, rgba(0,51,102,0.03), rgba(255,255,255,0.0));
+    }
+    .card{ background:#fff; border-radius:1rem; border:1px solid #e2e8f0; box-shadow:0 6px 18px rgba(2,6,23,.06); overflow:hidden; }
+  </style>
+</head>
+<body class="text-slate-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/morero-logo.png" alt="Morero" class="w-8 h-8 object-contain" onerror="this.style.display='none'">
+        <span class="font-semibold">Morero Intelligence Group</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html" class="hover:text-morero-blue2">Home</a>
+        <a href="insights.html" class="text-morero-blue font-semibold">Insights</a>
+        <a href="index.html#contact" class="px-4 py-2 rounded-full bg-morero-blue text-white hover:brightness-110">Talk to Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero (Morero gradient) -->
+  <section class="relative text-white">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-morero-blue to-slate-900"></div>
+    <div class="absolute inset-0 -z-10 opacity-30" aria-hidden="true"
+         style="background-image:
+           radial-gradient(600px 200px at 10% 10%, rgba(255,255,255,.25), transparent 70%),
+           radial-gradient(600px 200px at 90% 30%, rgba(218,165,32,.35), transparent 70%);"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <p class="text-sm text-white/80">Thought Leadership</p>
+      <h1 class="text-3xl md:text-4xl font-extrabold mt-1">Insights</h1>
+      <p class="mt-3 text-white/90 max-w-3xl">Essays and briefs on practical Data & AI built in Africa for real impact.</p>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card: Why Africa is the Future of AI -->
+      <article class="card">
+        <a href="why-africa-is-the-future-of-ai.html" class="block group">
+          <img src="assets/why-africa-ai-banner.png" alt="Why Africa is the Future of AI" class="w-full h-44 object-cover">
+          <div class="p-5">
+            <div class="text-xs text-slate-600">Essay • Sep 26, 2025</div>
+            <h2 class="mt-1 text-lg font-semibold group-hover:text-morero-blue">Why Africa is the Future of AI</h2>
+            <p class="mt-2 text-sm text-slate-600">Africa will not just use AI, Africa will shape the future of AI. Here’s why youth, data, languages and ethics give the continent an edge.</p>
+            <div class="mt-4 flex items-center gap-3 text-sm">
+              <img src="assets/author-partlet.jpg" alt="Partlet" class="w-7 h-7 rounded-full object-cover">
+              <span>By <strong>Partlet Mpheya Mphateng</strong></span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Placeholder cards for future posts -->
+      <article class="card opacity-80">
+        <div class="w-full h-44 bg-slate-200"></div>
+        <div class="p-5">
+          <div class="text-xs text-slate-600">Brief • Coming soon</div>
+          <h2 class="mt-1 text-lg font-semibold">Data Governance for AI: A POPIA-first Playbook</h2>
+          <p class="mt-2 text-sm text-slate-600">A practical guide to aligning AI projects with South African regulations and enterprise risk.</p>
+        </div>
+      </article>
+
+      <article class="card opacity-80">
+        <div class="w-full h-44 bg-slate-200"></div>
+        <div class="p-5">
+          <div class="text-xs text-slate-600">Essay • Coming soon</div>
+          <h2 class="mt-1 text-lg font-semibold">From Pilots to Production: Shipping AI that Sticks</h2>
+          <p class="mt-2 text-sm text-slate-600">Lessons from building copilots, RAG and analytics that drive measurable value.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Newsletter CTA -->
+    <section class="mt-10 border border-slate-200 rounded-2xl p-6 bg-gradient-to-r from-morero-blue to-morero-blue2 text-white">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h3 class="text-lg font-semibold">Get new insights in your inbox</h3>
+          <p class="text-white/90 text-sm">Occasional emails on Data & AI in Africa | no spam.</p>
+        </div>
+        <form class="flex gap-2 w-full md:w-auto" onsubmit="event.preventDefault(); alert('Thanks! You are subscribed.'); this.reset();">
+          <input type="email" required placeholder="your email" class="flex-1 md:w-72 rounded-lg border border-white/30 bg-white/10 placeholder-white/70 text-white p-3 focus:outline-none focus:ring-2 focus:ring-white/50">
+          <button class="px-4 py-2 rounded-lg bg-white text-morero-blue hover:bg-slate-100">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex items-center justify-between">
+      <p class="text-sm text-slate-600">© <span id="year"></span> Morero Intelligence Group (Pty) Ltd</p>
+      <a href="index.html#contact" class="text-sm text-morero-blue underline">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
